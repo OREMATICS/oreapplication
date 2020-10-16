@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+\section{BANWO TEMIDIRE OREOLUWA(moyosoreoluwabanwo@gmail.com)}
+\section{NUMBER [1]:FINANCE }
+\subsection{Question}
+Write a $500$-word explanation of bitcoin stock-to-flow model and make an argument for why it is a bad model \\
+\subsubsection{Answer}
+The stock-to-flow model (SF), popularized by a pseudonymous Dutch institutional investor which operates under the name “PlanB”, has been widely praised and is the leading valuation model for bitcoin proponents. SF has achieved viral popularity and inspired rags-to-riches dreams for those gambling it all on the future of bitcoin. However, it is believed that the model’s accuracy will likely be about as successful at forecasting bitcoin’s future price as the astrological models of the past were at predicting financial outcomes.
+PlanB’s paper “Modeling Bitcoin Value with Scarcity” states that certain precious metals have maintained a monetary role throughout history because of their unforgeable costliness and low rate of supply. For example, gold is valuable both because new supply (mined gold) is insignificant to the current supply and because it is impossible to replicate the vast stores of gold around the globe. PlanB then argues this same logic applies to bitcoin, which becomes more valuable as new supply is reduced every four years, ultimately culminating in a supply of 21 million bitcoin. Low rate of supply, which PlanB defines as “scarcity,” can be quantified using a metric called Stock-to-Flow (SF), which is the ratio between current supply and new supply.
+This premise is then translated into the hypothesis, “that scarcity, as measured by SF, directly drives value.” PlanB then plots bitcoin’s SF against USD market capitalization as well as two arbitrarily chosen SF data points for gold and silver.PlanB then runs a linear regression using the natural logarithm of bitcoin’s SF metric as the independent variable and the USD market capitalization as the dependent variable. The paper ends with the conclusion that there is a statistically significant relationship between USD market capitalization and SF values, as evidenced by the linear regression resulting in an R2 (a statistical measure of how close the data fits to a regression line) of ~0.95. The two randomly chosen data points for gold and silver are in line with bitcoin’s trajectory and presented as further evidence of the hypothesis. PlanB then suggests that investors can forecast the future USD market capitalization of bitcoin using the above formula. This has helped give credence to those $\$100,000$ bitcoin projections.
+There are several deficiencies within the model, both in its theoretical proposition and its empirical foundation.
+From a theoretical point of view, the model is based on the rather strong assertion that the USD market capitalization of a monetary good (e.g. gold and silver) is derived directly from their rate of new supply. No evidence or research is provided to support this idea, other than the singular data points selected to chart gold and silver’s market capitalization against bitcoin’s trajectory. 
+The second is the naive application of a linear regression that results in a high probability of a researcher finding spurious results. An entire overview of linear regression and its mathematical basis is beyond the scope of this analysis. However, there are several implementation errors well-established in the research community that demonstrate why the SF model is likely to be spurious.
+The SF model is the same slope-intercept equation everyone know to be the equation of a straight line; $y = mx + b$. An ordinary-least-squares (OLS) regression is not a predictive model but rather an estimation of the m and b values that minimize the difference between the actual y values and the estimated y values given by the equation mx+b. In other words, every change in xequates to a corresponding change in y.Recall that OLS is estimating how much y (Market Cap) changes for a given change in x (SF). On a month-to-month basis in which the model is derived, the change in x is effectively 0. As a result, the OLS model is doing nothing more than estimating Bitcoin’s historical growth rate. This becomes quite obvious when one extends the model into the near future. By 2045, the model estimates each Bitcoin will be worth $\$235,000,000,000$ before eventually converging to infinity as bitcoin’s flow approaches 0.
+Using the estimated slope-intercept formula is making the most naive prediction possible, because bitcoin grew by X in the past, it will grow by X in the future. One should remember that past results are not representative of future returns.
+
+
+\subsection{Question}
+Yara Inc is listed on the NYSE with a stock price of $\$40$-the company is not known to pay dividends. We need to price a call option with a strike of $\$45$ maturing in 4 months. The continuous-compounded risk-free rate is $3\%$/year, the mean return on the stock is $7\%$/year, and the standard deviation of the stock return is $40\%$/year. What is the Black-Scholes call price? \\
+\subsubsection{Solution}
+Black Scholes formula$:$ \\
+$\ \displaystyle C_{0}= S_{0}N(d_{1})-Xe^{-rt}N(d_{2}) $ \\
+Where $ \displaystyle d_{1}=\frac{\ln(\frac{S_{0}}{X})+(r+\frac{\sigma^{2}}{2})T}{\sigma \sqrt{T}} $ \\
+$ \displaystyle d_{2}=d_{1}- \sigma \sqrt{T} $\\
+$C_{0}:$The value of the call price\\
+$S_{0}:$The value of the underlying stock $=\$40$ \\
+$N( ):$The cumulative standard normal density function \\
+X:The exercise or strike price $=\$45$ \\
+r:The risk-free interest rate(annualized) $=0.03(3\%)$  \\
+T:The time until option expiration in years $=4$months$[\frac{4}{12}\approx 0.3333year]$\\
+$\sigma:$The annualized standard deviation $=0.4(40\%)$\\
+We then have that,\\
+$ \displaystyle d_{1}=\frac{\ln(\frac{40}{45})+(0.03+\frac{0.4^{2}}{2})0.3333}{0.4 (\sqrt{0.3333})} $ \\
+$ \displaystyle d_{1}=\frac{-0.1178+0.0367}{0.2309} $\\
+$ \displaystyle d_{1}= -0.3512 $ \\
+it then implies for $d_{2}$ we have,\\
+$ \displaystyle d_{2}= -0.3512-0.2309 $ \\
+$ \displaystyle d_{2}= -0.5821 $ \\
+Therefore,\\
+$ \displaystyle C_{0}= 40N(-0.3512)-45e^{-(0.03)(0.3333)}N(-0.5821) $ \\
+Where,\\
+$N(-0.3512)=0.3627$ \\
+$N(-0.5821)=0.2803)$ \\
+Which implies,\\
+$ \displaystyle C_{0}= 40(0.3627)-45(0.9902)(0.2803) $ \\
+$ \displaystyle C_{0}= 14.508-12.4899 $ \\
+$ \displaystyle C_{0}= 2.0181\approx 2.02 $ \\
+$ \displaystyle C_{0}=2.02 $ \\
+Therefore the black scholes price is $\$2.20$ \\
+
+\section{NUMBER [2]:Computer Science }
+\subsection{Question}
+Why is it a bad idea to use recursion method to find the Fibonacci of a number?\\
+\subsubsection{Solution}
+The Fibonacci sequence is, by definition, the integer sequence in which every number after the first two is the two preceding number.\\
+To simplfy: 0,1,1,2,3,5,8,13,21,34,55,89,...\\
+Recursively it is defined by $ \displaystyle F_{n}=F_{n-1}+F_{n-2}$\\
+Addressing the main problem, with a bit of breakdown. Consider the case $n=5$\\
+$F_{5}=F_{4}+F_{3}$\\
+$ =(F_{3}+F_{2})+(F_{2}+F_{1})$\\
+$ =[(F_{2}+F_{1})+(F_{1}+F_{0})]+[(F_{1}+F_{0})+F_{1}]$\\
+$ =F_{2}+F_{1}
++...+F_{0} $ \\
+From this we can observe that the recursion goes through all the intermediate steps and there is always a need to calculate every intermediate value multiple times. This is no bid deal for smaller numbers but this "complexity" grows exponentially with "n" like in the case of $F_{99}$,$F_{79}$ and every other large "n", its is more difficult to handle.\\
+
+\subsection{Question}
+Write a function that takes in a proth theorem to determine if said number is prime\\
+\subsubsection{solution}
+First defining Proth number: 
+If K is an odd number; n$>0$ and $2^{n}\geq K$, then $K2^{n}+1$ is a proth number.\\ 
+Proth's theorem then states that for $N=K2^{n}+1$ with K odd and $2^{n}>K$, where $n \in$ $\mathbb{Z}^{+}$ if there exist an integer $"a"$ $\ni$ $\displaystyle a^{\frac{N-1}{2}}\equiv -1(modN)$, then N is prime.\\
+A prime of this form is known as a proth prime.\\
+Note:\\
+$a\equiv b(modM)\implies M|(a-b)\implies \frac{a-b}{m}$\\
+$\frac{a-b}{m}=k$, $k\in\mathbb{Z}$\\
+This Implies\\
+$\displaystyle a^{\frac{N-1}{2}}\equiv-1(modN)$\\
+$\implies N|a^{\frac{N-1}{2}}-(-1)$\\
+$\implies N|a^{\frac{N-1}{2}}+1$\\
+$\frac{a^{\frac{N-1}{2}}+1}{N}=M$, $M\in\mathbb{Z}$\\
+Attached is a python program code that solves questions on this theorem\\
+
+\section{NUMBER [3]:Mathematics }
+\subsection{Question}
+Over all real numbers, find the minimum value of a positive real number y, such that \\
+$ \displaystyle y=\sqrt{[(x+6)^{2}+25]}+\sqrt{[(x-6)^{2}+121]}$ \\
+\subsubsection{Solution}
+ $ \displaystyle y=\sqrt{[(x+6)^{2}+25]}+\sqrt{[(x-6)^{2}+121]}$ \\
+ $\displaystyle \frac{dy}{dx}= \frac{x-6}{\sqrt{[(x-6)^{2}+121]}}+\frac{x+6}{\sqrt{[(x+6)^{2}+25]}} $\\
+ To find the minimum value set $\frac{dy}{dx}=0$, we then have,\\
+ $ \displaystyle\frac{x-6}{\sqrt{[(x-6)^{2}+121]}}+\frac{x+6}{\sqrt{[(x+6)^{2}+25]}}=0 $ \\
+ $ \displaystyle \frac{x-6}{\sqrt{[(x-6)^{2}+121]}}= - \frac{x+6}{\sqrt{[(x+6)^{2}+25]}} $ \\
+ Squaring both sides,\\
+  $ \displaystyle \frac{(x-6)^{2}}{(\sqrt{[(x-6)^{2}+121]})^{2}}=(-1)^{2} \frac{(x+6)^{2}}{(\sqrt{[(x+6)^{2}+25]})^{2}} $ \\
+  $ \displaystyle \frac{(x-6)^{2}}{[(x-6)^{2}+121]}= \frac{(x+6)^{2}}{[(x+6)^{2}+25]} $ \\
+ $ \displaystyle (x-6)^{2}[(x+6)^{2}+25]=(x+6)^{2}[(x-6)^{2}+121]$ \\
+ $ \displaystyle x^{4}-47x^{2}-300x+2196=x^{4}+49x^{2}+1452x+5652 $\\
+ $ \displaystyle 4x^{2}+73x+144=0$\\
+ solving quadratically using the completing the square method,\\
+  $ \displaystyle x^{2}+ \frac{73}{4}= \frac{-144}{4}$\\
+$\displaystyle x^{2}+ \frac{73}{4}=-36 $\\
+$\displaystyle x^{2}+ \frac{73}{4}+ \left(\frac{73}{4} \right)^{2}= -36+\left(\frac{73}{4}\right)^{2}$\\
+$\displaystyle \left(x+ \frac{73}{8}\right)^{2}=-36+ \frac{5329}{64}$ \\
+$\displaystyle \left(x+ \frac{73}{8}\right)^{2}= \frac{-2304+5329}{64}$ \\
+$\displaystyle \left(x+ \frac{73}{8}\right)^{2}= \frac{3025}{64}$ \\
+$\displaystyle x+ \frac{73}{8}= \pm \sqrt{\frac{3025}{64}} $ \\
+$\displaystyle x+ \frac{73}{8}= \pm \frac{55}{8} $ \\
+
+$\displaystyle x+ \frac{73}{8}= -\frac{73}{8} \pm \frac{55}{8} $ \\
+$\displaystyle \Rightarrow  x+ \frac{73}{8}= -\frac{73}{8} + \frac{55}{8} $ \\
+or $\displaystyle \Rightarrow  x+ \frac{73}{8}= -\frac{73}{8} - \frac{55}{8}$\\
+$\displaystyle \Rightarrow x= -\frac{9}{4}$ or $x=-16$\\ 
+Therefore from,\\
+$\displaystyle y=\sqrt{[(x+6)^{2}+25]}+\sqrt{[(x-6)^{2}+121]}$\\
+We have, \\
+$\displaystyle y\left(-\frac{9}{4}\right)=20$, and\\
+$\displaystyle y(-16)=35.771$\\
+$\Rightarrow y$ has a minimum value at $20$\\
+
+\end{document}
